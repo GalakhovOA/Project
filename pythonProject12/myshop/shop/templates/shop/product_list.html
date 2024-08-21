@@ -1,22 +1,26 @@
+<!-- shop/templates/shop/product_list.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Product List</title>
+    <link rel="stylesheet" href="{% static 'shop/css/product_list.css' %}">
 </head>
 <body>
-    <h1>Products</h1>
-    <ul>
+    <h1>Product List</h1>
+    <div id="product-container">
         {% for product in products %}
-        <li>
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" width="150">
-            <h2>{{ product.name }}</h2>
-            <p>{{ product.description }}</p>
-            <p>{{ product.price }} $</p>
-            <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
-        </li>
+            <div class="product-card">
+                <img src="{% static 'shop/images/' %}{{ product.image }}" alt="{{ product.name }}">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <button class="add-to-cart" data-product-id="{{ product.id }}">Add to Cart</button>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
+    <script src="{% static 'shop/js/product_list.js' %}"></script>
 </body>
 </html>

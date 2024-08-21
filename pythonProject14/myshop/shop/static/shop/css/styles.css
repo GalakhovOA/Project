@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#products, #cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product, .cart-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 1px; /* Отступ сверху */
+    left: 5px;
+}
+nav a {
+    color: black; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    font-family: Arial, sans-serif; /* Приятный шрифт */
+    padding: 10px 15px; /* Внутренние отступы для кнопок */
+    margin-right: 10px; /* Отступы между ссылками */
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 5px; /* Скругленные углы */
+    transition: color 0.9s ease, background-color 0.3s ease; /* Плавный переход цвета */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+
+/* Эффект при наведении курсора */
+nav a:hover {
+    color: white; /* Изменение цвета текста при наведении */
+    background-color: gray; /* Изменение фона при наведении */
+}
+
+/* Стили для активных и посещённых ссылок */
+nav a:active, nav a:visited {
+    color: black; /* Цвет текста для активных и посещённых ссылок */
+}

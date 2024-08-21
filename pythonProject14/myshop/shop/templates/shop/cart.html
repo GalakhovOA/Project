@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'shop/css/styles.css' %}">
+</head>
+<body>
+    <h1>Корзина</h1>
+    <div id="cart-items">
+        {% for item in cart_items %}
+            <div class="cart-item">
+                <h2>{{ item.product.name }}</h2>
+                <p>Quantity: {{ item.quantity }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+{% endblock %}
