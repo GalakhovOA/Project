@@ -108,3 +108,122 @@ nav a:active, nav a:visited {
 .remove-item:hover {
     color: #cc0000;
 }
+
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-color: #4CAF50; /* Зеленый цвет для кнопки */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
+
+.buy-button:focus {
+    outline: none; /* Удаление стандартного фокуса браузера */
+}
+
+/* Общие стили для формы регистрации */
+.registration-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.2);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Стили для контейнера заголовка */
+.header-container {
+    text-align: center; /* Центрирование текста */
+    margin-top: 50px; /* Отступ сверху для поднятия заголовка */
+    margin-bottom: 30px; /* Отступ снизу для отступа от остального контента */
+}
+
+/* Стили для заголовка */
+.header-title {
+    font-size: 2em; /* Размер шрифта заголовка */
+    color: #333; /* Цвет шрифта */
+    font-family: 'Arial', sans-serif; /* Шрифт заголовка */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    font-weight: bold; /* Полужирное начертание */
+    letter-spacing: 2px; /* Межбуквенное расстояние */
+    border-bottom: 3px solid #4CAF50; /* Подчеркивание заголовка */
+    padding-bottom: 15px; /* Отступ     снизу заголовка */
+}
+
+.header-container {
+    text-align: center; /* Центрирование текста */
+    margin-top: 1px; /* Увеличенный отступ сверху для поднятия заголовка */
+    margin-bottom: 100px; /* Отступ снизу для отступа от остального контента */

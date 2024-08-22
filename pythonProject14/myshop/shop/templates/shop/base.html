@@ -9,7 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>Магазин видеокарт</h1>
+        <div class="header-container">
+        <h1 class="header-title">Магазин видеокарт</h1>
+    </div>
         <nav>
             <a href="{% url 'home_page' %}">Домашняя страница</a>
            <a href="{% url 'cart_view' %}">Корзина ({{ total_items }})</a>

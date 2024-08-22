@@ -30,7 +30,26 @@
         </div>
         {% endfor %}
     </div>
+
+    <div class="cart-container">
+    <div class="cart-items">
+        <!-- Ваши элементы корзины -->
+    </div>
+
+    <div class="cart-summary">
+        <div class="total-price">
+            Итоговая сумма: <strong> {{ total_price }} Рублей </strong>
+        </div>
+        <!-- Кнопка "Купить" -->
+        <button class="buy-button" type="button">
+            Купить
+        </button>
+    </div>
+</div>
+
+
 </body>
 </html>
 
 {% endblock %}
+

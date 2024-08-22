@@ -10,3 +10,4 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('remove_from_cart/<int:item_id>/', views.remove_from_cart, name='remove_from_cart'),
 ]
+
