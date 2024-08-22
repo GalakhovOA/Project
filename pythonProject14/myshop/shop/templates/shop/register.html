@@ -5,7 +5,7 @@
 {% block content %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +47,9 @@
             </div>
             <button type="submit" class="btn">Регистрация</button>
         </form>
+        <div class="login-link">
+            <p>Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
+        </div>
     </div>
 </body>
 </html>

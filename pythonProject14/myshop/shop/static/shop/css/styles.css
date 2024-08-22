@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../images/background.jpg');
+    background-image: url('C:\Users\Олег\Desktop\osnova');
     background-size: cover;
     margin: 0;
     padding: 20px;
@@ -56,31 +56,31 @@ header {
 
 nav {
     position: absolute;
-    top: 1px; /* Отступ сверху */
+    top: 1px;
     left: 5px;
 }
 nav a {
-    color: black; /* Цвет текста */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 18px; /* Размер шрифта */
-    font-family: Arial, sans-serif; /* Приятный шрифт */
-    padding: 10px 15px; /* Внутренние отступы для кнопок */
-    margin-right: 10px; /* Отступы между ссылками */
-    background-color: transparent; /* Прозрачный фон */
-    border-radius: 5px; /* Скругленные углы */
-    transition: color 0.9s ease, background-color 0.3s ease; /* Плавный переход цвета */
-    cursor: pointer; /* Курсор в виде указателя */
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: color 0.9s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
 
-/* Эффект при наведении курсора */
+
 nav a:hover {
-    color: white; /* Изменение цвета текста при наведении */
-    background-color: gray; /* Изменение фона при наведении */
+    color: white;
+    background-color: gray;
 }
 
-/* Стили для активных и посещённых ссылок */
+
 nav a:active, nav a:visited {
-    color: black; /* Цвет текста для активных и посещённых ссылок */
+    color: black;
 }
 
 
@@ -123,7 +123,7 @@ nav a:active, nav a:visited {
 }
 
 .buy-button {
-    background-color: #4CAF50; /* Зеленый цвет для кнопки */
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -134,14 +134,14 @@ nav a:active, nav a:visited {
 }
 
 .buy-button:hover {
-    background-color: #45a049; /* Более темный зеленый при наведении */
+    background-color: #45a049;
 }
 
 .buy-button:focus {
-    outline: none; /* Удаление стандартного фокуса браузера */
+    outline: none;
 }
 
-/* Общие стили для формы регистрации */
+
 .registration-container {
     max-width: 500px;
     margin: 50px auto;
@@ -204,26 +204,87 @@ nav a:active, nav a:visited {
     outline: none;
 }
 
-/* Стили для контейнера заголовка */
+
 .header-container {
-    text-align: center; /* Центрирование текста */
-    margin-top: 50px; /* Отступ сверху для поднятия заголовка */
-    margin-bottom: 30px; /* Отступ снизу для отступа от остального контента */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
-/* Стили для заголовка */
+
 .header-title {
-    font-size: 2em; /* Размер шрифта заголовка */
-    color: #333; /* Цвет шрифта */
-    font-family: 'Arial', sans-serif; /* Шрифт заголовка */
-    text-transform: uppercase; /* Преобразование текста в верхний регистр */
-    font-weight: bold; /* Полужирное начертание */
-    letter-spacing: 2px; /* Межбуквенное расстояние */
-    border-bottom: 3px solid #4CAF50; /* Подчеркивание заголовка */
-    padding-bottom: 15px; /* Отступ     снизу заголовка */
+    font-size: 2em;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 15px;
 }
 
 .header-container {
-    text-align: center; /* Центрирование текста */
-    margin-top: 1px; /* Увеличенный отступ сверху для поднятия заголовка */
-    margin-bottom: 100px; /* Отступ снизу для отступа от остального контента */
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 100px;
+
+.registration-container, .login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Это скругляет углы */
+    box-sizing: border-box; /* Это включает паддинг и бордер в ширину элемента */
+}
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.form-errors {
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+
+.register-link, .login-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.register-link a, .login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+}
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+
