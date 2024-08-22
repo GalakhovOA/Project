@@ -82,3 +82,29 @@ nav a:hover {
 nav a:active, nav a:visited {
     color: black; /* Цвет текста для активных и посещённых ссылок */
 }
+
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item .product-details {
+    flex-grow: 1;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+    color: #cc0000;
+}
