@@ -1,3 +1,70 @@
+/* Основные стили для карточки продукта */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для изображения продукта */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Стили для названия продукта */
+.product h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+/* Стили для списка с деталями продукта */
+.product-details {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Стили для элемента списка */
+.product-details li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Стили для цены продукта */
+.product .price {
+    font-size: 1.2em;
+    margin: 0 0 15px 0;
+    color: #007bff;
+}
+
+/* Стили для кнопки добавления в корзину */
+.product .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: #0056b3;
+}
+
+
 
 body {
     font-family: Arial, sans-serif;
