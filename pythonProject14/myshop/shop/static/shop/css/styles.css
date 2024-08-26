@@ -19,36 +19,52 @@ h1 {
     justify-content: center;
 }
 
-.product, .cart-item {
-    background-color: rgba(255, 255, 255, 0.8);
+.product {
+    position: relative; /* Убедитесь, что карточка имеет относительное позиционирование */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяет пространство между элементами */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Задайте желаемую ширину карточки */
+    background: #fff;
     padding: 15px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-    width: 100%;
-    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 10px 0;
 }
 
 .btn {
-    display: block;
-    width: 100%;
+    display: block; /* Делает ссылку блочным элементом */
+    width: 100%; /* Кнопка занимает всю ширину карточки */
     text-align: center;
     background-color: #28a745;
-    color: white;
+    color: #fff;
     padding: 10px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0 0 8px 8px; /* Скругляет нижние углы кнопки */
     text-decoration: none;
-    margin-top: 10px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
     background-color: #218838;
 }
-
 
 header {
     position: relative;
@@ -59,6 +75,7 @@ nav {
     top: -25px;
     left: 5px;
 }
+
 nav a {
     color: black;
     text-decoration: none;
@@ -72,17 +89,14 @@ nav a {
     cursor: pointer;
 }
 
-
 nav a:hover {
     color: white;
     background-color: gray;
 }
 
-
 nav a:active, nav a:visited {
     color: black;
 }
-
 
 .cart-item {
     display: flex;
@@ -141,7 +155,6 @@ nav a:active, nav a:visited {
     outline: none;
 }
 
-
 .registration-container {
     max-width: 500px;
     margin: 50px auto;
@@ -185,75 +198,6 @@ nav a:active, nav a:visited {
 }
 
 .btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-
-.header-container {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-
-.header-title {
-    font-size: 2em;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #4CAF50;
-    padding-bottom: 15px;
-}
-
-.header-container {
-    text-align: center;
-    margin-top: 1px;
-    margin-bottom: 100px;
-
-.registration-container, .login-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px; /* Это скругляет углы */
-    box-sizing: border-box; /* Это включает паддинг и бордер в ширину элемента */
-}
-.btn {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -284,6 +228,7 @@ nav a:active, nav a:visited {
 .register-link a:hover, .login-link a:hover {
     text-decoration: underline;
 }
+
 .login-container .form-group {
     margin-bottom: 15px;
 }
@@ -300,16 +245,164 @@ nav a:active, nav a:visited {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
+/* Универсальные стили для всех кнопок с классом .btn */
+.btn, .buy-button {
+    background-color: #007bff; /* Общий цвет фона */
+    color: #fff; /* Общий цвет текста */
     border: none;
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover, .buy-button:hover {
+    background-color: #0056b3; /* Общий цвет фона при наведении */
+}
+
+/* Удаление лишних стилей для кнопки "Купить", если есть */
+.buy-button {
+    font-size: 16px; /* Размер шрифта может быть скорректирован по вашему усмотрению */
+}
+
+/* Стили для карточек товара в корзине */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Увеличение отступов для лучшего визуального восприятия */
+    margin-bottom: 15px; /* Отступ между карточками */
+    border: 1px solid #ddd; /* Легкая граница вокруг карточки */
+    border-radius: 8px; /* Скругление углов */
+    background-color: #f9f9f9; /* Цвет фона карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для выделения */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавные изменения при наведении */
+}
+
+.cart-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиление тени при наведении */
+    transform: translateY(-5px); /* Легкий эффект подъема карточки при наведении */
+}
+
+.cart-item .product-details {
+    flex-grow: 1;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+    color: #cc0000;
+}
+
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    background-color: #fff; /* Белый фон для итоговой суммы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.total-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
     background-color: #0056b3;
+}
+
+/* Стили для контейнера входа */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Стили заголовка в разделе входа */
+.login-container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стили для групп полей формы */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Стили для меток полей формы */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Стили для полей ввода */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки */
+button.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для ссылки регистрации */
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
 }
